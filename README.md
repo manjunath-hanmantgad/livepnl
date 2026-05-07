@@ -31,6 +31,7 @@ Local-first app to track multiple FYERS accounts, compute live/unrealized + real
 - `app/db/*` - SQLite schema + repository
 - `app/ui/streamlit_app.py` - Streamlit dashboard
 - `app/ui/streamlit_compact.py` - compact monitor dashboard
+- `app/scripts/open_corner_monitor_mac.sh` - macOS corner monitor launcher
 - `app/scripts/set_token.py` - encrypted token setter
 - `app/scripts/fyers_auth.py` - FYERS auth-code login automation
 - `fyers_auth.py` - shortcut launcher for auth flow
@@ -103,6 +104,12 @@ Terminal 3 (optional compact monitor):
 source .venv/bin/activate
 API_BASE_URL=http://127.0.0.1:8010 streamlit run app/ui/streamlit_compact.py --server.port 8503
 ```
+
+macOS quick corner launcher:
+```bash
+./app/scripts/open_corner_monitor_mac.sh
+```
+This opens a small Chrome app-window sized for corner monitoring while your full dashboard can stay on another screen/tab.
 
 ## API
 ### `GET /health`
